@@ -10,6 +10,8 @@ _Good Gook Study, Day Day Up!_
     - [1.commands.md](Back-End/mysql/1.commands.md)
     - [2.单表查询.md](Back-End/mysql/2.单表查询.md)
     - [3.多表查询.md](Back-End/mysql/3.多表查询.md)
+    - [4.事务处理.md](Back-End/mysql/4.事务处理.md)
+    - [5.完整性约束.md](Back-End/mysql/5.完整性约束.md)
   - nginx
     - [0.intro.md](Back-End/nginx/0.intro.md)
     - [1.架构.md](Back-End/nginx/1.架构.md)
