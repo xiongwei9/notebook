@@ -8,10 +8,17 @@ _Good Gook Study, Day Day Up!_
 - Back-End
   - mysql
     - [1.commands.md](Back-End/mysql/1.commands.md)
-    - [2.单表查询.md](Back-End/mysql/2.单表查询.md)
-    - [3.多表查询.md](Back-End/mysql/3.多表查询.md)
-    - [4.事务处理.md](Back-End/mysql/4.事务处理.md)
-    - [5.完整性约束.md](Back-End/mysql/5.完整性约束.md)
+    - [2.1.单表查询.md](Back-End/mysql/2.1.单表查询.md)
+    - [2.2.多表查询.md](Back-End/mysql/2.2.多表查询.md)
+    - [2.3.查询优化.md](Back-End/mysql/2.3.查询优化.md)
+    - [3.事务处理.md](Back-End/mysql/3.事务处理.md)
+    - [4.完整性约束.md](Back-End/mysql/4.完整性约束.md)
+    - [5.1.数据值类型.md](Back-End/mysql/5.1.数据值类型.md)
+    - [5.2.数据类型.md](Back-End/mysql/5.2.数据类型.md)
+    - [6.视图和存储程序.md](Back-End/mysql/6.视图和存储程序.md)
+    - [7.0.SA_MySQL管理.md](Back-End/mysql/7.0.SA_MySQL管理.md)
+    - [7.1.SA_MySQL数据目录.md](Back-End/mysql/7.1.SA_MySQL数据目录.md)
+    - [7.2.SA_基本管理.md](Back-End/mysql/7.2.SA_基本管理.md)
   - nginx
     - [0.intro.md](Back-End/nginx/0.intro.md)
     - [1.架构.md](Back-End/nginx/1.架构.md)
@@ -30,5 +37,5 @@ _Good Gook Study, Day Day Up!_
     - [4.登录验证.md](Front-End/tips/4.登录验证.md)
     - [5.mobile-web.md](Front-End/tips/5.mobile-web.md)
     - [6.https.md](Front-End/tips/6.https.md)
-- [app.js](app.js)
 - [README.md](README.md)
+- [app.js](app.js)
