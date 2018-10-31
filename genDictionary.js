@@ -4,6 +4,7 @@
 const os = require('os');
 const fs = require('fs');
 const path = require('path');
+const util = require('util');
 
 let data = `
 # 学习笔记
@@ -16,36 +17,9 @@ _Good Gook Study, Day Day Up!_
 
 const FsUtil = (function() {
     return {
-        readDir: (dir) => {
-            return new Promise((res, rej) => {
-                fs.readdir(dir, (err, files) => {
-                    if (err) {
-                        return rej(err);
-                    }
-                    res(files);
-                });
-            });
-        },
-        fileState: (path) => {
-            return new Promise((res, rej) => {
-                fs.lstat(path, (err, stats) => {
-                    if (err) {
-                        return rej(err);
-                    }
-                    res(stats);
-                });
-            });
-        },
-        writeFile: (path, data) => {
-            return new Promise((res, rej) => {
-                fs.writeFile(path, data, err => {
-                    if (err) {
-                        return rej(err);
-                    }
-                    res(null);
-                });
-            })
-        },
+        readDir: util.promisify(fs.readdir),
+        fileState: util.promisify(fs.lstat),
+        writeFile: util.promisify(fs.writeFile),
     };
 })();
 
