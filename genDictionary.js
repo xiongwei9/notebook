@@ -23,23 +23,31 @@ const FsUtil = (function() {
     };
 })();
 
-const travelDir = async function(dir, dirTree = null) {
+const travelDir = async function(dir) {
+    const dirTree = {};
     const files = await FsUtil.readDir(dir);
 
-    for (let file of files) {
+    // 并行访问同级目录
+    const travelArr = files.map(async file => {
         if (file.startsWith('.') || file === 'assets') {
-            continue;
+            return null;
         }
         const pathname = path.resolve(dir, file);
         const stats = await FsUtil.fileState(pathname);
         if (!stats.isDirectory()) {
+            return null;
+        }
+        return travelDir(pathname);
+    });
+    // 等待同级子目录都成功返回
+    const subTrees = await Promise.all(travelArr);
+
+    // 写入子目录
+    for (let [index, subTree] of subTrees.entries()) {
+        if (subTree === null) {
             continue;
         }
-
-        if (!dirTree) {
-            dirTree = {};
-        }
-        dirTree[file] = await travelDir(pathname, dirTree[file]);
+        dirTree[files[index]] = subTree;
     }
     return dirTree;
 };
