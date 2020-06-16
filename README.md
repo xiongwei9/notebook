@@ -1,7 +1,7 @@
 
 # 学习笔记
 
-_Good Gook Study, Day Day Up!_
+_Good Good Study, Day Day Up!_
 
 ## directory:
 
@@ -22,3 +22,4 @@ _Good Gook Study, Day Day Up!_
   - [html-css](Front-End/html-css)
   - [web-app](Front-End/web-app)
 - [Job](Job)
+- [Rust](Rust)

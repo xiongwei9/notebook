@@ -9,7 +9,7 @@ const util = require('util');
 let data = `
 # 学习笔记
 
-_Good Gook Study, Day Day Up!_
+_Good Good Study, Day Day Up!_
 
 ## directory:
 
